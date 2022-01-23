@@ -3,7 +3,7 @@ import java.util.UUID;
 public class Context {
 
     final UUID serverId;
-    UUID currentLeader = null;
+    volatile UUID currentLeader = null;
 
     public Context(UUID serverId) {
         this.serverId = serverId;
